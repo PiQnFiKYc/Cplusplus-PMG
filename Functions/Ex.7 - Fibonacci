@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+
+void FibonacciNum (long num,int k)
+{
+	if(k >= 1) {
+		cout<<"1"<<endl<<"1"<<endl;
+	}
+		long fibNumber1 = 1;
+        long fibNumber2 = 1;
+        long fibNumber3 = 1;
+        for (int i = 1; i < num; i++)
+        {
+            fibNumber1 = fibNumber2;
+            fibNumber2 = fibNumber3;
+            fibNumber3 = fibNumber1 + fibNumber2;
+            if(fibNumber3 <= k)
+            cout<<fibNumber3<<endl;
+            
+        }
+	
+      
+}
+
+int main()
+{
+	int k;
+	cout<<"Enter k: ";
+	cin>>k; // k e dokyde da prodylji poredicata 
+	cout<<endl;
+	long num; 
+	cout<<"Enter num: ";
+	cin>>num; // num e tova chislo na fibonacci
+	FibonacciNum(num,k);
+}
