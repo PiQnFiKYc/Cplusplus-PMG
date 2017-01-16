@@ -1,0 +1,65 @@
+#include<iostream>
+using namespace std;
+	double RectangleArea (double width, double length)
+{
+	double area = width*length;
+	
+	
+	return area;
+		
+}
+
+	double RectanglePerimeter (double width, double length)
+{
+	
+	double perimeter = (2*width) + (2*length);
+	
+	return perimeter;
+		
+}
+
+	int main()
+{
+	
+	double firstWidth,firstLength;
+	
+	cout<<"Enter the width of first rectangle: ";
+	cin>>firstWidth;
+	cout<<"Enter the length of first rectangle: ";
+	cin>>firstLength;	
+	
+	double secondWidth,secondLength;
+	
+	cout<<"Enter the width of second rectangle: ";
+	cin>>secondWidth;
+	cout<<"Enter the length of second rectangle: ";
+	cin>>secondLength;
+	
+	double firstRectArea = RectangleArea(firstWidth, firstLength);
+	double secondRectArea = RectangleArea(secondWidth, secondLength);
+	double firstRectP = RectanglePerimeter(firstWidth, firstLength);
+	double secondRectP = RectanglePerimeter(secondWidth, secondLength);
+	
+	double finalArea = 0;
+	double finalPerimeter = 0;
+	
+	if(firstRectArea > secondRectArea && firstRectP > secondRectP)
+	{
+		finalArea = firstRectArea - secondRectArea;
+		if(firstRectP > secondRectP)
+		finalPerimeter = firstRectP;
+		else finalPerimeter = secondRectP;
+	}
+	else if(firstRectArea < secondRectArea && firstRectP < secondRectP)
+	{
+		finalArea = secondRectArea - firstRectArea;
+		if(firstRectP > secondRectP)
+		finalPerimeter = firstRectP;
+		else finalPerimeter = secondRectP;
+	}
+	
+	cout<<"Area of final figure is: "<<finalArea<<endl;
+	cout<<"Perimeter of final figure is: "<<finalPerimeter;
+}
+
+
