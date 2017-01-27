@@ -1,0 +1,75 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+void ReadArray (int arr[], int n)
+{
+
+	for(int i = 0; i<n;i++)
+	{
+		cin>>arr[i];
+	}
+}
+
+void OutArray(int arr[], int n)
+{
+	for(int i=0; i<n; i++)
+	{
+		cout<<arr[i]<<endl;
+		
+		
+	}
+}
+void DecimalToBinaryString(int arr[],int n)
+{
+	string binary = "";
+   for(int j = 0; j<n; j++)
+   {
+   	
+    int count = 0;
+    while (n > 0)
+        count++;
+        n = n(n-1);
+//    
+//    {
+//    	binary[i] =(char)(n%2);
+//    	n=n/2;
+//    	i++;
+//    	count++;
+//	}
+   	
+   
+    int mask = 1;
+    for(int i = 0; i < count; i++)
+    {
+        if((mask & arr[j]) != 0 >= 1)
+            binary = "1"+binary;
+        else
+            binary = "0"+binary;
+        mask<<=1;
+    }
+    
+//    int i=0;
+//    int count =0;
+//    while(n!=0)
+//    {
+//    	binary[i] =(char)(n%2);
+//    	n=n/2;
+//    	i++;
+//    	count++;
+//	}
+//	for(int i=count-1;i>=0;i--)
+//	cout<<binary[i];
+// 
+   }
+}
+int main()
+{
+	int n;
+	cin>>n;
+	int arr[n];
+	ReadArray(arr,n);
+	OutArray(arr,n);
+	DecimalToBinaryString(arr,n);
+	//cout<<resultBin<<endl;
+}
